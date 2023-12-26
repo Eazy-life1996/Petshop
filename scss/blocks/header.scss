@@ -1,0 +1,128 @@
+.header{
+  width: 100%;
+}
+
+.header_container {
+  @include paddings;
+  padding-top: 10%;
+  padding-bottom: 8%;
+}
+
+.header_p {
+  color: $white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.header_mainTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  color: $yellow;
+  font-size: 28px;
+}
+
+.header_span {
+  font-family: 'Lobster', sans-serif;
+  letter-spacing: 10px;
+  font-size: 35px;
+}
+
+.header_imgBox {
+  border: 5px solid $orange;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 54% 46% 66% 34% / 33% 61% 39% 67%;
+  overflow: hidden;
+  animation: border-animate 10s infinite alternate;
+  background: linear-gradient(137deg, rgba(255,209,0,1) 0%, rgba(255,106,0,1) 100%);
+}
+
+@keyframes border-animate {
+  0% {
+    border-radius: 54% 46% 66% 34% / 33% 61% 39% 67%;
+  }
+
+  25% {
+    border-radius: 31% 69% 66% 34% / 49% 39% 61% 51%;
+  }
+
+  50% {
+    border-radius: 59% 41% 21% 79% / 53% 39% 61% 47%;
+  }
+
+  75% {
+    border-radius: 18% 82% 64% 36% / 53% 72% 28% 47% ;
+  }
+
+  100% {
+    border-radius: 43% 57% 25% 75% / 53% 22% 78% 47% ;
+  }
+}
+
+.header_img {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .header_container {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+  }
+
+  .header_imgBox {
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 90%;
+  }
+
+  .header_block {
+    width: 40%;
+  }
+
+  .header_block:first-child {
+    order: 1;
+    width: 60%;
+  }
+
+  .header_mainTitle {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .header_span {
+    font-size: 38px;
+  }
+
+  .header_p {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header_block {
+    width: 50%;
+  }
+
+  .header_block:first-child {
+    width: 50%;
+  }
+
+  .header_mainTitle {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .header_span {
+    font-size: 60px;
+  }
+
+  .header_p {
+    font-size: 105%;
+    padding-right: 10%;
+  }
+}

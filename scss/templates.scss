@@ -1,0 +1,30 @@
+body{
+  background-color: $black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin paddings {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@mixin title {
+  color: $yellow;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 15px;
+
+  @media (min-width:$desktop-width) {
+    font-size: 30px;
+  }
+}
+
+@mixin title-in {
+  font-family: 'Lobster', sans-serif;
+  letter-spacing: 10px;
+  font-size: 30px;
+
+  @media (min-width:$desktop-width) {
+    font-size: 35px;
+  }
+}
